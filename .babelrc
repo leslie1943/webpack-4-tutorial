@@ -1,0 +1,39 @@
+/**
+ *🌈🌈🌈Babel的配置文件，放在项目根目录下
+ *该文件用来设置转码规则和插件，基本格式如下
+ *    {
+ *      "presets":[], // presets字段设定转码规则
+        # ES2015转码规则
+        $ npm install --save-dev babel-preset-es2015
+
+        # react转码规则
+        $ npm install --save-dev babel-preset-react
+
+        # ES7不同阶段语法提案的转码规则（共有4个阶段），选装一个
+        $ npm install --save-dev babel-preset-stage-0
+        $ npm install --save-dev babel-preset-stage-1
+        $ npm install --save-dev babel-preset-stage-2
+        $ npm install --save-dev babel-preset-stage-3
+ *      "plugins":[]
+ *    }
+*/
+{
+  "presets": [
+    /**
+    * 只有env时,作用和latest相同,包括es5,es6,es7,但是主要的作用是:
+    * 可以设置targets来智能识别当前运行环境,进行适当的转码,而不是一股脑的全部转成es5等.
+    */
+    // "env"
+  ],
+  "plugins": [
+    "dynamic-import-webpack", // 将 webpack 中的 import 转为 require.ensure
+    "transform-object-rest-spread" // es6 语法中的解构赋值
+    // [
+    //   "import",
+    //   {
+    //     "libraryName": "antd-mobile", // 引入 antd-mobile 和 css
+    //     "style": "css"
+    //   }
+    // ]
+  ]
+}
