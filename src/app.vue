@@ -1,6 +1,10 @@
 <template>
   <div id="test-replace-app" class="main-container">
+    <div style="text-align:center;">
+      <img :src="imgUrl_2" style="height:600px;width:800px;">
+    </div>
     <div class="message">Show the message.</div>
+
     <div class="operation">
       <el-button type="primary" @click="showMsg">Click me</el-button>
     </div>
@@ -10,10 +14,12 @@
   </div>
 </template>
 <script>
+import demoImg_2 from './assets/demo2.jpg'
 export default {
   name: 'App',
   data() {
     return {
+      imgUrl_2: demoImg_2,
       msg: 'you could see the popup message from webpack.',
       deCon: {
         a: 'A', b: 'B', c: 'C'
@@ -36,7 +42,8 @@ export default {
 .main-container {
   width: 100%;
   height: 600px;
-  background: #1f6bb5;
+  // background: #1f6bb5;
+  background: rgb(201, 195, 195);
   color: black;
   font-size: 16px;
   .message {

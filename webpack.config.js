@@ -66,6 +66,11 @@ module.exports = {
         loader: "vue-loader"
       },
       {
+        test: /\.(gif|png|jp?g|svg)$/i,
+        exclude: /node_modules/,
+        loader: "file-loader"
+      },
+      {
         test: /\.scss$|\.css$/,
         use: [
           'style-loader',
