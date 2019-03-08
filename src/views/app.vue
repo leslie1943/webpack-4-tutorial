@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-import demoImg_2 from './assets/demo2.jpg'
+import demoImg_2 from '../assets/demo2.jpg'
 export default {
   name: 'App',
   data() {
@@ -43,7 +43,8 @@ export default {
   width: 100%;
   height: 600px;
   // background: #1f6bb5;
-  background: rgb(201, 195, 195);
+  // background: rgb(201, 195, 195);
+  background: pink;
   color: black;
   font-size: 16px;
   .message {
@@ -72,4 +73,3 @@ export default {
   }
 }
 </style>
-

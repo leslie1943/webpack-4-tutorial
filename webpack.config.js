@@ -1,6 +1,10 @@
 // webpack v4
 const path = require('path')
 
+function resolve(dir) {
+  return path.join(__dirname, '..', dir)
+}
+
 // 自定义测试插件
 const HelloWorldPlugin = require('./customPlugins/hello-world');
 
@@ -41,7 +45,8 @@ module.exports = {
 
     alias: {
       // 必须加,否则运行时会报错误和警告.
-      vue$: 'vue/dist/vue.js'
+      vue$: 'vue/dist/vue.js',
+      '@': resolve('src')
     }
   },
   module: {
@@ -79,6 +84,17 @@ module.exports = {
           'postcss-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        include: [resolve('src')],
+        options: {
+          // eslint-friendly-formatter: 可以让eslint的错误信息出现在终端上
+          formatter: require('eslint-friendly-formatter'),
+          emitWarning: true
+        }
       }
     ]
   },
