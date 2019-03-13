@@ -1,7 +1,8 @@
 <template>
   <div id="test-replace-app" class="main-container">
+    <div class="footer" style="background:#1f6bb5;">Show the message.</div>
     <div style="text-align:center;">
-      <img :src="imgUrl_2" style="height:600px;width:800px;">
+      <img :src="imgUrl_2" style="height:500px;width:800px;">
     </div>
     <div class="message">Show the message.</div>
 
@@ -10,7 +11,7 @@
     </div>
     <div class="footer">Show the message.</div>
     <div class="footer" style="background:black;color:white">Show the message.</div>
-    <div class="footer">Show the message.</div>
+    <div class="footer" style="background:#f5ac24;">Show the message.</div>
   </div>
 </template>
 <script>
